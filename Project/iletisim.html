@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iletisim.css">
+
+    <title>İletişim</title>
+  </head>
+  <body id="body">
+    <script src="validation.js"></script>
+    <script src="changeValidate.js"></script>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top shadow-lg">
+        <a class="navbar-brand" href="index.html">Aziz Şimşek</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="hakkimda.html">Hakkımda ve İlgi Alanlarım <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Egitim .html">Egitim Bilgilerim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sehrim.html">Şehrim</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="miras.html">Mirasımız</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="iletisim.html">İletişim Sayfası</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ulas.html">Sosyal Medya ve Github</a>
+            </li>
+            
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+          <a class="navbar-brand" href="#">
+            <img src="Pictures/indir17.png" alt="logo" style="width:100px; height: 40px;">
+          </a>
+        </div>
+      </nav>
+
+      <header id="headerSection">
+        <div class="overlay">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col my-auto">
+                        <h1 class="display-3 text-white" ></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </header>
+
+      <section class="text-white mx-5 mb-5 ">
+        <div class="bg-danger container border border-secondary rounded shadow-lg" id="form1">
+          <form action="iletisimgit.php" name = "myForm" class="needs-validation" onsubmit ="return validate();" method="POST" >
+          <div class="form-row my-3 ">
+            <div class="col-lg-4 my-3">
+              <label for="name">Lütfen Kullanıcı Adınızı Giriniz:</label>
+              <input type="text"class="form-control" name="ad" id="name" >
+            </div>
+            <div class="col-lg-4 my-3">
+              <label for="email">Lütfen Email'inizi Giriniz:</label>
+              <input type="text" class="form-control " name="email"  onchange="emailV();">
+              <div class="valid-feedback">
+                Girdiğiniz Email'in formatı Doğru  :)
+              </div>
+              <div class="invalid-feedback">
+               Email'iniz hatalı ya da Eksik Girdiniz!!  :\
+              </div>
+            </div>
+            <div class="col-lg-4 my-3">
+              <label for="password">Lütfen Şifrenizi Giriniz:</label>
+              <input type="password"class="form-control " name="sifre" onchange="sifreV();">
+              <div class="invalid-feedback">
+                Şifrenizi hatalı ya da Eksik Girdiniz!!  :\
+              </div>
+              <div class="valid-feedback">
+                Girdiğiniz Şifre'nin formatı Doğru  :)
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-6 my-3">
+              <div class="form-row">
+                <h6 >İlgi Alanların  </h6>
+              </div>
+              <div class="form-row ">
+                <div class="col-md-3 custom-control custom-checkbox ml-4">
+                  <input class="custom-control-input" type="checkbox" name="sports[]" value="Video oyunu" id="vgame">
+                  <label class="custom-control-label" for="vgame"> Kitap Okumak-Müzik Dinlemek</label>
+                </div>
+                <div class="col-md-2 custom-control custom-checkbox ml-4">
+                  <input class="custom-control-input" type="checkbox" name="sports[]" value="Müzik" id="music">
+                  <label class="custom-control-label" for="music">Video Oyunları Oynamak </label>
+                </div>
+                <div class="col-md-2 custom-control custom-checkbox ml-4">
+                  <input class="custom-control-input" type="checkbox" name="sports[]" value="Film" id="film">
+                  <label class="custom-control-label" for="film">Gezmek-Dolaşmak</label>
+                </div>
+                <div class="col-md-2 custom-control custom-checkbox ml-4">
+                  <input class="custom-control-input" type="checkbox" name="sports[]" value="Gezi" id="gezi">
+                  <label class="custom-control-label" for="gezi">Başka İlgi Alanlarım Var</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 my-3">
+              <div class="form-row">
+                <h6>Yazılımcı Olarak Hangisisin ?</h6>
+              </div>
+              <div class="form-row">
+                <div class="col-md-3 custom-control custom-radio ml-4">
+                  <input type="radio" id="js" name="language" class="custom-control-input" value="Front-end Developer" checked>
+                  <label class="custom-control-label" for="Front-end Developer">Front-end Developer</label>
+                </div>
+                <div class="col-md-2 custom-control custom-radio ml-4">
+                  <input type="radio" id="Back-end Developer" name="language" class="custom-control-input" value="Back-end Developer">
+                  <label class="custom-control-label" for="Back-end Developer">Back-end Developer </label>
+                </div>
+                <div class="col-md-2 custom-control custom-radio ml-4">
+                  <input type="radio" id="Full-stack Developer" name="language" class="custom-control-input" value="Full-stack Developer">
+                  <label class="custom-control-label" for="Full-stack Developer">Full-stack Developer</label>
+                </div>
+                <div class="col-md-2 custom-control custom-radio ml-4">
+                  <input type="radio" id="python" name="language" class="custom-control-input" value="Hiçbiri Değilim">
+                  <label class="custom-control-label" for="Hiçbiri Değilim">Hiçbiri Değilim</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-12 my-3">
+              <label for=addres>Adres</label>
+                <textarea class="form-control" name="addres" id="addres">
+                </textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-6 my-3">
+              <label for="sehir">Lütfen yaşadınız şehiri seçiniz </label>
+              <select name="sehirler"class="form-control" id="sehir">
+                <option value="İstanbul" >İstanbul</option>
+                <option value="Sakarya"selected>Sakarya</option>
+                <option value="Ankara">Ankara</option>
+                <option value="İzmir">İzmir</option>
+                <option value="Adıyman">Adıyman</option>
+              </select> 
+            </div>
+          </div>  
+          <div class="form-row">
+            <div class="col-lg-12 mt-3 mb-5">
+              <input class="btn btn-primary" value="Temizle" type="reset">  
+              <input type="submit" class="btn btn-primary" value="Gonder">
+            </div>
+          </div>        
+          </form>
+        </div>
+      </section>
+
+
+    <script src="bootstrap/js/jquery.js" ></script>
+    <script src="bootstrap/js/popper.min.js" ></script>
+    <script src="bootstrap/js/bootstrap.js" ></script>
+
+
+    </body>
+</html>
